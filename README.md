@@ -17,7 +17,7 @@ To set up the project, follow these steps:
    - During installation, note the username and password you set up.
 
 2. **Download JDBC Driver**:
-   - Download the PostgreSQL JDBC driver from [PostgreSQL JDBC](https://jdbc.postgresql.org/download/postgresql-<version>.jar) (replace `<version>` with the latest version).
+   - Download the PostgreSQL JDBC driver from [PostgreSQL JDBC](https://jdbc.postgresql.org/download/postgresql-42.7.4.jar) (replace `<version>` with the latest version).
 
 3. **Add JDBC Driver to Your Project**:
    - **Using Eclipse**:
