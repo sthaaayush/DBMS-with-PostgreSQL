@@ -80,6 +80,8 @@ public class CRUDExample {
 	}
 
 	public static void main(String[] args) {
-		insertStudent("John Doe", 20, "john.doe@example.com");
+//		insertStudent("Hohn Joe", 20, "hohn.joe@example.com");
+		updateStudent(5, "Kon Moe", 10, "kon.moe@gmail.com");
+		selectStudents();
 	}
 }
