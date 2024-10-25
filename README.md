@@ -45,9 +45,15 @@ To set up the project, follow these steps:
    - Update your database connection details in the `DatabaseConnection` class.
 
 ## Implementation
-The project includes Java files for performing CRUD operations. You can find the implementation under the `src` directory.
+## Implementation
+### 1. [Database Connection](src/DatabaseConnection.java)
+Provides methods to establish and close a connection to the PostgreSQL database. The `getConnection()` method opens a new connection, and `closeConnection()` ensures proper resource management by closing it when operations are complete.
 
-- [src/CRUD/StudentCRUD.java](src/CRUD/StudentCRUD.java)
+### 2. [CRUD Operations](src/CRUDExample.java)
+Contains methods to perform all four CRUD (Create, Read, Update, Delete) operations on the `students` table. These operations enable data manipulation for account records within the database.
+
+### 3. [Transaction Example](src/TransactionExample.java)
+Implements transaction management to perform multiple updates within a single transaction. This example transfers funds between accounts by updating balances and ensures data consistency by either committing all changes or rolling them back in case of an error.
 
 ### Notes
 - Ensure PostgreSQL is running before executing the Java application.
