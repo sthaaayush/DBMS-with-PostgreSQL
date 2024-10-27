@@ -11,6 +11,7 @@ public class TransactionExample {
 		PreparedStatement debitStm = null;
 		PreparedStatement creditStm = null;
 		PreparedStatement dis = null;
+		ResultSet rs = null;
 
 		try {
 			conn.setAutoCommit(false);
@@ -42,7 +43,7 @@ public class TransactionExample {
 			System.out.println("Transaction successful!");
 
 			// Display updated account balances
-			ResultSet rs = dis.executeQuery();
+			rs = dis.executeQuery();
 			while (rs.next()) {
 				System.out.println(rs.getInt("account_id") + " | " + rs.getString("account_holder") + " | "
 						+ rs.getDouble("balance"));
@@ -54,13 +55,10 @@ public class TransactionExample {
 			System.out.println("Transaction failed, changes rolled back.");
 			e.printStackTrace();
 		} finally {
-			if (debitStm != null)
-				debitStm.close();
-			if (creditStm != null)
-				creditStm.close();
-			if (dis != null)
-				dis.close();
-			DatabaseConnection.closeConnection();
+			// Close all resources: Connection, PreparedStatements, and ResultSet
+			DatabaseConnection.closeConnection(conn, debitStm, rs);
+			DatabaseConnection.closeConnection(null, dis);
+			DatabaseConnection.closeConnection(null, creditStm);
 		}
 	}
 }
