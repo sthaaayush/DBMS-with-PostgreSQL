@@ -78,6 +78,10 @@ Contains methods to perform all four CRUD (Create, Read, Update, Delete) operati
 
 Implements transaction management to perform multiple updates within a single transaction. This example transfers funds between accounts by updating balances and ensures data consistency by either committing all changes or rolling them back in case of an error.
 
+### 4. [Batch Processing](src/CRUDExample.java)
+Implements batch processing for efficient bulk insertion of data into the `students` table. The method `insertStudentsBatch` inserts multiple student records in one go by queuing SQL statements and executing them as a single transaction, reducing database round trips.
+
+
 ### Notes
 
 - Ensure PostgreSQL is running before executing the Java application.
