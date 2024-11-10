@@ -81,6 +81,9 @@ Implements transaction management to perform multiple updates within a single tr
 ### 4. [Batch Processing](src/CRUDExample.java)
 Implements batch processing for efficient bulk insertion of data into the `students` table. The method `insertStudentsBatch` inserts multiple student records in one go by queuing SQL statements and executing them as a single transaction, reducing database round trips.
 
+### 4. [Stored & Callable Statement](src/StoredStatement.java)
+Demonstrates the use of stored statements to retrieve data from a PostgreSQL view. This example uses a callable statement to execute a pre-defined query that fetches active employees’ details (ID, name, department, salary) from the `activeemployeedetails` view, simplifying data retrieval and improving reusability.
+
 
 ### Notes
 
