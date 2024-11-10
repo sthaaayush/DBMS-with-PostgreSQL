@@ -59,6 +59,16 @@ To set up the project, follow these steps:
       );
       ```
 
+      ```sql
+      CREATE TABLE employees (
+          id INT PRIMARY KEY,
+          name VARCHAR(50) NOT NULL,
+          department VARCHAR(50),
+          salary DECIMAL(10, 2),
+          isActive BOOLEAN DEFAULT TRUE
+      );
+      ```
+
 5.  **Configure Database Connection**:
     - Update your database connection details in the `DatabaseConnection` class.
 
